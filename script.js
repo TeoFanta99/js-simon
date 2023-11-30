@@ -42,47 +42,56 @@ console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 let timer = 3;
 
 
-// DICHIARARE la variabile del punteggio
+// DICHIARARE la variabile del punteggio 
 let score = 0;
+
+
+// DICHIARARE la variabile dei numeri utente
+let userNumber;
+
 
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
 const clock = setInterval(
     function() {
         if (timer === 0) {
-            alert("tempo scaduto")
+
+            clearInterval(timer);
+
             // i 5 numeri scompaiono, fare con d-none in html e css
 
-            // GENERARE un array per i 5 numeri dell'utente
+            // GENERARE un array contenente TUTTI i numeri dell'utente
             const userArray = [];
 
-            // DICHIARO le variabili per gli item degli array
-            let i;
-            let j;
+            // GENERARE un array contenente SOLO i numeri indovinati dall'utente
+            const userWinnerArray = [];
             
 
             // CHIEDERE all'utente i 5 numeri (con ciclo for)
-
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; userArray.length < 5; i++) {
                 
                 // PROMPT 
-                let userNumber = parseInt(prompt("Inserisci un numero"));
+                userNumber = parseInt(prompt("Inserisci un numero"));
+
+                // PUSHARE il numero nell'array di TUTTI i numeri utente
+                userArray.push(userNumber);
 
                 // AGGIUNGERE i numeri all'array solo se presenti nell'array di numeri random
                 if (randomNumbers.includes(userNumber)) {
-                    userArray.push(userNumber);
-                    console.log(userArray);
+                    userWinnerArray.push(userNumber);
+                    console.log(userWinnerArray);
                 }
 
             } 
+            console.log(userArray);
 
-            clearInterval(timer);
+
         } else {
             timer--
             console.log(timer);
         }
-
+    
+    },
     1000
-    }
 )
 
 
