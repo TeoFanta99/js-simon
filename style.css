@@ -54,3 +54,20 @@
 .d-inline-block {
     display: inline-block;
 }
+
+#alert-msg {
+    width: 500px;
+    height: 200px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    padding-top: 20px;
+}
+
+
+#esito {
+    width: 500px;
+    height: 200px;
+    background-color: yellow;
+}

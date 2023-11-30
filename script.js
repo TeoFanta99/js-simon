@@ -8,6 +8,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 const playBtn = document.getElementById("play");
 const timerRunning = document.getElementById ("main-timer");
 const numbersToRemember = document.getElementById("numeri-da-ricordare");
+const alertMsg = document.getElementById("alert-msg");
 
 
 // FUNZIONE che genera numeri random
@@ -39,7 +40,7 @@ function genArrayRandomNum (arrMin, arrMax, arrLength) {
 
 
 // DICHIARAZIONE di 3 variabili: partenza del timer di 30 secondi, punteggio e i numeri utente
-let timer = 30;
+let timer = 3;
 let userNumber;
 
 
@@ -51,24 +52,25 @@ playBtn.addEventListener("click",
         // GENERARE l'array di 5 numeri random tra 1 e 100
         const randomNumbers = genArrayRandomNum (1, 100, 5);
         console.log(`I numeri da ricordare sono: ${randomNumbers}`);
+        numbersToRemember.innerHTML = randomNumbers;
 
-        numbersToRemember.classList.remove("d-none")
+        numbersToRemember.classList.remove("d-none");
 
         const clock = setInterval(
             function() {
                 if (timer === 0) {
     
                     clearInterval(clock);
-    
-                    alert("Tempo scaduto");
-    
+
+                    numbersToRemember.classList.add("d-none");
+                    alertMsg.classList.remove("d-none");
+
                     // GENERARE un array contenente SOLO i numeri indovinati dall'utente
                     const userArray = [];
                     
-    
                     // CHIEDERE all'utente i 5 numeri (con ciclo for)
                     for (let i = 0; i < 5; i++) {
-                        
+                    
                         // PROMPT 
                         userNumber = parseInt(prompt("Inserisci un numero"));
     
@@ -85,14 +87,15 @@ playBtn.addEventListener("click",
                     } else {
                         console.log(`Hai perso. Il tuo punteggio è stato di ${userArray.length} punti.`);
                     }
-    
-                    console.log(`Hai indovinato i seguenti numeri: ${user}`);
+
+                    console.log(`Hai indovinato i seguenti numeri: ${userArray}`);
     
                 } else {
                     timer--
                     console.log(timer);
                     timerRunning.innerHTML = timer;
                 }
+
             
             },
             1000
