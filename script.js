@@ -4,6 +4,11 @@ Da lì parte un timer di 30 secondi. Dopo 30 secondi i numeri scompaiono e l’u
 Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
+// SELEZIONE degli elementi del DOM: bottone play, timer
+const playBtn = document.getElementById("play");
+const timerRunning = document.getElementById ("main-timer");
+
+
 // FUNZIONE che genera numeri random
 function genRandomNum (min, max) {
     return Math.floor(Math.random()* (max - min + 1)) + min;
@@ -32,7 +37,6 @@ function genArrayRandomNum (arrMin, arrMax, arrLength) {
 }
 
 
-
 // GENERARE l'array di 5 numeri random tra 1 e 100
 const randomNumbers = genArrayRandomNum (1, 100, 5);
 console.log(`I numeri da ricordare sono: ${randomNumbers}`);
@@ -42,6 +46,7 @@ console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 let timer = 3;
 let score = 0;
 let userNumber;
+
 
 
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
