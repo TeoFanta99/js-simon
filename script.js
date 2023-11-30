@@ -57,10 +57,12 @@ const clock = setInterval(
 
             clearInterval(clock);
 
+            alert("Tempo scaduto");
+
             // i 5 numeri scompaiono, fare con d-none in html e css
 
             // GENERARE un array contenente SOLO i numeri indovinati dall'utente
-            const userWinnerArray = [];
+            const userArray = [];
             
 
             // CHIEDERE all'utente i 5 numeri (con ciclo for)
@@ -71,13 +73,19 @@ const clock = setInterval(
 
                 // AGGIUNGERE i numeri all'array solo se presenti nell'array di numeri random
                 if (randomNumbers.includes(userNumber)) {
-                    userWinnerArray.push(userNumber);
-                    console.log(userWinnerArray);
+                    userArray.push(userNumber);
                 }
 
             } 
-            console.log(userWinnerArray);
+            console.log(userArray);
 
+            if (userArray.length === 5) {
+                console.log("Hai vinto");
+            } else {
+                console.log(`Hai perso. Il tuo punteggio è stato di ${userArray.length} punti.`);
+            }
+
+            console.log(`Hai indovinato i seguenti numeri: ${userArray}`);
 
         } else {
             timer--
