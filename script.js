@@ -10,7 +10,28 @@ function genRandomNum (min, max) {
 }
 
 
-// FUNZIONE che genera 5 numeri random in un dato range
+// FUNZIONE che genera tot numeri random in un dato range
+function genArrayRandomNum (arrMin, arrMax, arrLength) {
+
+    // GENERO l'array da riempire
+    const arrayToFill = [];
+
+    // RIEMPO l'array con il ciclo while
+    while (arrayToFill.length < arrLength) {
+
+        // GENERO un numero random in un range
+        let newNumber = genRandomNum(arrMin, arrMax);
+
+        // SE il numero generato non è presente nell'array, lo pusho
+        if (!arrayToFill.includes(newNumber)) {
+            arrayToFill.push(newNumber);
+        }
+    }
+    return arrayToFill
+
+}
+
+
 
 // GENERARE i 5 numeri
 
