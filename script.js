@@ -91,6 +91,7 @@ playBtn.addEventListener("click",
                 } else {
                     timer--
                     console.log(timer);
+                    timerRunning.innerHTML = timer;
                 }
             
             },
