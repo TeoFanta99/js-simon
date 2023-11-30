@@ -27,8 +27,15 @@
 }
 
 #numeri-da-ricordare {
-    display: none;
     width: 400px;
     height: 200px;
     background-color: red;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inline-block {
+    display: inline-block;
 }
