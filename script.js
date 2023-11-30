@@ -52,6 +52,8 @@ playBtn.addEventListener("click",
         const randomNumbers = genArrayRandomNum (1, 100, 5);
         console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 
+        numbersToRemember.classList.remove("d-none")
+
         const clock = setInterval(
             function() {
                 if (timer === 0) {
