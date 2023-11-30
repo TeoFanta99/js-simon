@@ -56,7 +56,16 @@ const clock = setInterval(
 )
 
 
-// SELEZIONARE un form nell'html dove l'utnete inserisce i numeri
+// CHIEDERE all'utente i 5 numeri
+const numeroUno = parseInt(prompt("Inserisci il primo numero"));
+const numeroDue = parseInt(prompt("Inserisci il secondo numero"));
+const numeroTre = parseInt(prompt("Inserisci il terzo numero"));
+const numeroQuattro = parseInt(prompt("Inserisci il quarto numero"));
+const numeroCinque = parseInt(prompt("Inserisci il quinto numero"));
+
+
+// CHECK per verificare la corrispondenza dei numeri inseriti dall'utente con l'array generato
+
 
 
 
