@@ -10,7 +10,7 @@ function genRandomNum (min, max) {
 }
 
 
-// FUNZIONE che genera tot numeri random in un dato range
+// FUNZIONE che genera un array di tot numeri random in un dato range
 function genArrayRandomNum (arrMin, arrMax, arrLength) {
 
     // GENERO l'array da riempire
@@ -34,6 +34,8 @@ function genArrayRandomNum (arrMin, arrMax, arrLength) {
 
 
 // GENERARE i 5 numeri
+const randomNumbers = genArrayRandomNum (1, 100, 5);
+console.log(randomNumbers);
 
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
 
