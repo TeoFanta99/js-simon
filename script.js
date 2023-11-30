@@ -59,21 +59,15 @@ const clock = setInterval(
 
             // i 5 numeri scompaiono, fare con d-none in html e css
 
-            // GENERARE un array contenente TUTTI i numeri dell'utente
-            const userArray = [];
-
             // GENERARE un array contenente SOLO i numeri indovinati dall'utente
             const userWinnerArray = [];
             
 
             // CHIEDERE all'utente i 5 numeri (con ciclo for)
-            for (let i = 0; userArray.length < 5; i++) {
+            for (let i = 0; i < 5; i++) {
                 
                 // PROMPT 
                 userNumber = parseInt(prompt("Inserisci un numero"));
-
-                // PUSHARE il numero nell'array di TUTTI i numeri utente
-                userArray.push(userNumber);
 
                 // AGGIUNGERE i numeri all'array solo se presenti nell'array di numeri random
                 if (randomNumbers.includes(userNumber)) {
@@ -82,7 +76,7 @@ const clock = setInterval(
                 }
 
             } 
-            console.log(userArray);
+            console.log(userWinnerArray);
 
 
         } else {
