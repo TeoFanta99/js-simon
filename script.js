@@ -60,42 +60,29 @@ const clock = setInterval(
             let j;
             
 
-            // CHIEDERE all'utente i 5 numeri
-            const numeroUno = parseInt(prompt("Inserisci il primo numero"));
-            console.log(`Hai inserito il numero: ${numeroUno}`);
-            userArray.push(numeroUno);
+            // CHIEDERE all'utente i 5 numeri (con ciclo for)
 
-            const numeroDue = parseInt(prompt("Inserisci il secondo numero"));
-            console.log(`Hai inserito il numero: ${numeroDue}`);
-            userArray.push(numeroDue);
+            for (let i = 0; i < 5; i++) {
+                
+                // PROMPT 
+                let userNumber = parseInt(prompt("Inserisci un numero"));
 
-            const numeroTre = parseInt(prompt("Inserisci il terzo numero"));
-            console.log(`Hai inserito il numero: ${numeroTre}`);
-            userArray.push(numeroTre);
+                // AGGIUNGERE i numeri all'array solo se presenti nell'array di numeri random
+                if (randomNumbers.includes(userNumber)) {
+                    userArray.push(userNumber);
+                    console.log(userArray);
+                }
 
-            const numeroQuattro = parseInt(prompt("Inserisci il quarto numero"));
-            console.log(`Hai inserito il numero: ${numeroQuattro}`);
-            userArray.push(numeroQuattro);
-
-            const numeroCinque = parseInt(prompt("Inserisci il quinto numero"));
-            console.log(`Hai inserito il numero: ${numeroCinque}`);
-            userArray.push(numeroCinque);
+            } 
 
             clearInterval(timer);
-
-            // CALCOLARE il punteggio
-            if () {
-                alert("Hai vinto")
-            } else {
-                alert(`Hai totalizzato ${score} su 5`)
-            }
-            console.log(score);
         } else {
             timer--
             console.log(timer);
         }
-    },
-    1000   
+
+    1000
+    }
 )
 
 
