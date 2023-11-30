@@ -41,6 +41,10 @@ console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 // DICHIARARE la variabile di partenza dl timer di 30 secondi
 let timer = 3;
 
+
+// DICHIARARE la variabile del punteggio
+let score = 0;
+
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
 const clock = setInterval(
     function() {
@@ -50,6 +54,10 @@ const clock = setInterval(
 
             // GENERARE un array per i 5 numeri dell'utente
             const userArray = [];
+
+            // DICHIARO le variabili per gli item degli array
+            let i;
+            let j;
             
 
             // CHIEDERE all'utente i 5 numeri
@@ -74,6 +82,14 @@ const clock = setInterval(
             userArray.push(numeroCinque);
 
             clearInterval(timer);
+
+            // CALCOLARE il punteggio
+            if () {
+                alert("Hai vinto")
+            } else {
+                alert(`Hai totalizzato ${score} su 5`)
+            }
+            console.log(score);
         } else {
             timer--
             console.log(timer);
