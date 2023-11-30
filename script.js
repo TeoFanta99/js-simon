@@ -55,7 +55,7 @@ const clock = setInterval(
     function() {
         if (timer === 0) {
 
-            clearInterval(timer);
+            clearInterval(clock);
 
             // i 5 numeri scompaiono, fare con d-none in html e css
 
