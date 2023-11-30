@@ -5,7 +5,9 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 */
 
 // FUNZIONE che genera numeri random
-
+function genRandomNum (min, max) {
+    return Math.floor(Math.random()* (max - min + 1)) + min;
+}
 
 
 // FUNZIONE che genera 5 numeri random in un dato range
