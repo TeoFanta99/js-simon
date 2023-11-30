@@ -37,9 +37,30 @@ function genArrayRandomNum (arrMin, arrMax, arrLength) {
 const randomNumbers = genArrayRandomNum (1, 100, 5);
 console.log(randomNumbers);
 
+
+// DICHIARARE la variabile di partenza dl timer di 30 secondi
+let timer = 30;
+
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
+const clock = setInterval(
+    function() {
+        if (timer === 0) {
+            alert("tempo scaduto")
+            // i 5 numeri scompaiono, fare con d-none in html e css
+        } else {
+            // timer--
+            // console.log(timer);
+        }
+    },
+    1000   
+)
+
 
 // SELEZIONARE un form nell'html dove l'utnete inserisce i numeri
 
+
+
 // COMUNICARE quanti e quali numeri sono stati indovinati
+
+
 
