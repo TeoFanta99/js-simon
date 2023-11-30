@@ -5,22 +5,30 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    margin-top: 30px;
-}
-
-#main-timer {
-    width: 200px;
-    height: 200px;
-    background-color: darkblue;
     margin-top: 30px;
 }
 
 #play {
     padding: 10px 30px;
     margin-top: 30px;
+}
+
+.other-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#main-timer {
+    width: 200px;
+    height: 200px;
+    background-color: darkblue;
+}
+
+#numeri-da-ricordare {
+    display: none;
+    width: 400px;
+    height: 200px;
+    background-color: red;
 }
