@@ -38,15 +38,9 @@ const randomNumbers = genArrayRandomNum (1, 100, 5);
 console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 
 
-// DICHIARARE la variabile di partenza dl timer di 30 secondi
+// DICHIARAZIONE di 3 variabili: partenza del timer di 30 secondi, punteggio e i numeri utente
 let timer = 3;
-
-
-// DICHIARARE la variabile del punteggio 
 let score = 0;
-
-
-// DICHIARARE la variabile dei numeri utente
 let userNumber;
 
 
