@@ -85,7 +85,7 @@ const clock = setInterval(
                 console.log(`Hai perso. Il tuo punteggio è stato di ${userArray.length} punti.`);
             }
 
-            console.log(`Hai indovinato i seguenti numeri: ${userArray}`);
+            console.log(`Hai indovinato i seguenti numeri: ${user}`);
 
         } else {
             timer--
@@ -95,13 +95,3 @@ const clock = setInterval(
     },
     1000
 )
-
-
-// CHECK per verificare la corrispondenza dei numeri inseriti dall'utente con l'array generato
-
-
-
-// COMUNICARE quanti e quali numeri sono stati indovinati
-
-
-
