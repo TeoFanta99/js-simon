@@ -33,13 +33,13 @@ function genArrayRandomNum (arrMin, arrMax, arrLength) {
 
 
 
-// GENERARE i 5 numeri
+// GENERARE l'array di 5 numeri random tra 1 e 100
 const randomNumbers = genArrayRandomNum (1, 100, 5);
-console.log(randomNumbers);
+console.log(`I numeri da ricordare sono: ${randomNumbers}`);
 
 
 // DICHIARARE la variabile di partenza dl timer di 30 secondi
-let timer = 10;
+let timer = 3;
 
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
 const clock = setInterval(
@@ -47,17 +47,32 @@ const clock = setInterval(
         if (timer === 0) {
             alert("tempo scaduto")
             // i 5 numeri scompaiono, fare con d-none in html e css
+
+            // GENERARE un array per i 5 numeri dell'utente
+            const userArray = [];
+            
+
             // CHIEDERE all'utente i 5 numeri
             const numeroUno = parseInt(prompt("Inserisci il primo numero"));
             console.log(`Hai inserito il numero: ${numeroUno}`);
+            userArray.push(numeroUno);
+
             const numeroDue = parseInt(prompt("Inserisci il secondo numero"));
             console.log(`Hai inserito il numero: ${numeroDue}`);
+            userArray.push(numeroDue);
+
             const numeroTre = parseInt(prompt("Inserisci il terzo numero"));
             console.log(`Hai inserito il numero: ${numeroTre}`);
+            userArray.push(numeroTre);
+
             const numeroQuattro = parseInt(prompt("Inserisci il quarto numero"));
             console.log(`Hai inserito il numero: ${numeroQuattro}`);
+            userArray.push(numeroQuattro);
+
             const numeroCinque = parseInt(prompt("Inserisci il quinto numero"));
             console.log(`Hai inserito il numero: ${numeroCinque}`);
+            userArray.push(numeroCinque);
+
             clearInterval(timer);
         } else {
             timer--
@@ -68,11 +83,7 @@ const clock = setInterval(
 )
 
 
-
-
-
 // CHECK per verificare la corrispondenza dei numeri inseriti dall'utente con l'array generato
-
 
 
 
