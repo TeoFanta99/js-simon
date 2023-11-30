@@ -39,7 +39,7 @@ console.log(randomNumbers);
 
 
 // DICHIARARE la variabile di partenza dl timer di 30 secondi
-let timer = 30;
+let timer = 10;
 
 // GENERARE un timer di 30 secondi, al terimne del quale i 5 numeri scompaiono
 const clock = setInterval(
@@ -47,21 +47,28 @@ const clock = setInterval(
         if (timer === 0) {
             alert("tempo scaduto")
             // i 5 numeri scompaiono, fare con d-none in html e css
+            // CHIEDERE all'utente i 5 numeri
+            const numeroUno = parseInt(prompt("Inserisci il primo numero"));
+            console.log(`Hai inserito il numero: ${numeroUno}`);
+            const numeroDue = parseInt(prompt("Inserisci il secondo numero"));
+            console.log(`Hai inserito il numero: ${numeroDue}`);
+            const numeroTre = parseInt(prompt("Inserisci il terzo numero"));
+            console.log(`Hai inserito il numero: ${numeroTre}`);
+            const numeroQuattro = parseInt(prompt("Inserisci il quarto numero"));
+            console.log(`Hai inserito il numero: ${numeroQuattro}`);
+            const numeroCinque = parseInt(prompt("Inserisci il quinto numero"));
+            console.log(`Hai inserito il numero: ${numeroCinque}`);
+            clearInterval(timer);
         } else {
-            // timer--
-            // console.log(timer);
+            timer--
+            console.log(timer);
         }
     },
     1000   
 )
 
 
-// CHIEDERE all'utente i 5 numeri
-const numeroUno = parseInt(prompt("Inserisci il primo numero"));
-const numeroDue = parseInt(prompt("Inserisci il secondo numero"));
-const numeroTre = parseInt(prompt("Inserisci il terzo numero"));
-const numeroQuattro = parseInt(prompt("Inserisci il quarto numero"));
-const numeroCinque = parseInt(prompt("Inserisci il quinto numero"));
+
 
 
 // CHECK per verificare la corrispondenza dei numeri inseriti dall'utente con l'array generato
